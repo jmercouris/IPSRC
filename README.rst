@@ -52,6 +52,18 @@ In the above example, you will have to configure the repository
 to have a remote origin that it may push/pull to, otherwise the data
 will have nowhere to go (to be hosted).
 
+Usage: On the Server
+------------------------------------------------------------------------
+You'll want to install all the dependencies located in the
+requirements file. You'll then wish to set up a cron job to run
+:code:`python server_broadcast.py` at some interval of your choice.
+
+Usage: On the Client
+------------------------------------------------------------------------
+You'll want to install all the dependencies located in the
+requirements file. You'll then want to run :code:`python client_source.py`
+whenever you wish to update your server's address on the client.
+
 How it works:
 ------------------------------------------------------------------------
 The server will periodically encrypt its IP and broadcast it to some
