@@ -27,7 +27,8 @@ an example, please see server_configuration.ini):
 
 In the above configuration, we have set the platform to be Git. This
 means that the server will obtain its IP address, encrypt it, and push
-it to a Git repository.
+it to a Git repository. The public key must be the client's public
+key.
 
 Your client configuration will look something like the following (for
 an example, please see client_configuration.ini):
