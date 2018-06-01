@@ -14,6 +14,7 @@ def encrypt_ip():
     
     :returns: The IP Address of the machine calling this function, encrypted
     :rtype: bytes = b'...' a sequence of octets
+    
     """
     settings = configparser.ConfigParser()
     settings.read('server_configuration.ini')
