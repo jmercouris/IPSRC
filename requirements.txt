@@ -1,1 +1,3 @@
+ipgetter==0.7
 pycryptodome==3.6.1
+
