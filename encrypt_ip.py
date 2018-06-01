@@ -1,17 +1,24 @@
-import argparse
-import ast
-import configparser
+#########################################################################
+# This file is used on the Server for the Server to encrypt its IP and  #
+# post it publicly online.                                              #
+#########################################################################
 
-import Crypto
-from Crypto import Random
+import configparser
 from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
 
 settings = configparser.ConfigParser()
 settings.read('server_configuration.ini')
-
 public_key_path = settings.get('public-key', 'path')
 
-with open(public_key_path, 'r') as myfile:
-    public_key = myfile.read().replace('\n', '')
+# Open the Public Key - the public key of the client computer
+public_key = RSA.importKey(open(public_key_path).read())
 
-print(public_key)
+cipher = PKCS1_OAEP.new(public_key)
+
+message = "attack at dawn"
+encrypted_message = cipher.encrypt(message.encode("utf-8"))
+
+# Write the Encrypted IP to a File - to be uploaded publicly
+with open("encrypted_ip", 'wb') as encrypted_ip:
+    encrypted_ip.write(encrypted_message)
