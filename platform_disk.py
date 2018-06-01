@@ -1,9 +1,12 @@
-##########################################################################
-# This file provides an example of the broadcast API one must follow.    #
-# One must implement two functions, broadcast_data, and read_data. These #
-# two functions will allow the server and the client to broadcast        #
-# and source the data they need.                                         #
-##########################################################################
+##############################################################################
+# This file provides an example of the broadcast API one must follow.        #
+# One must implement two functions, broadcast_data, and read_data. These     #
+# two functions will allow the server and the client to broadcast            #
+# and source the data they need.                                             #
+#                                                                            #
+# The user will also need to update platform_disk to include new information #
+# about the broadcast and read functions                                     #
+##############################################################################
 
 
 def broadcast_data(encrypted_message):
