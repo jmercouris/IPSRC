@@ -1,10 +1,12 @@
-##############################################################
-# Using the disk as medium for broadcasting/reading the data #
-##############################################################
-
+##########################################################################
+# This file provides an example of the broadcast API one must follow.    #
+# One must implement two functions, broadcast_data, and read_data. These #
+# two functions will allow the server and the client to broadcast        #
+# and source the data they need.                                         #
+##########################################################################
 
 def broadcast_data(encrypted_message):
-    """Write the encrypted_message to a file
+    """Write the encrypted_message to disk
     
     :param encrypted_message: bytes = b'...' a sequence of octets
     :returns:None
@@ -22,7 +24,6 @@ def read_data():
     :rtype: bytes
     
     """
-    
     with open("encrypted_ip", 'rb') as encrypted_ip:
         data = encrypted_ip.read()
     return data

@@ -1,3 +1,9 @@
+#########################################################################################
+# This file is used on the client to source the encrypted IP address from the internet. #
+# You can change the way the IP sourced by change the import below "platform_disk" to   #
+# any medium that you would like to use.                                                #
+#########################################################################################
+
 import getpass
 from platform_disk import read_data
 from cryptography import decrypt_ip
