@@ -5,6 +5,7 @@
 # and source the data they need.                                         #
 ##########################################################################
 
+
 def broadcast_data(encrypted_message):
     """Write the encrypted_message to disk
     
