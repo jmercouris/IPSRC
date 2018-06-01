@@ -33,7 +33,13 @@ def decrypt_ip(data, passphrase):
 
 
 def read_from_disk():
-    # Write the Encrypted IP to a File - to be uploaded privately
+    """Read the encrypted IP from disk
+    
+    :returns: returns the encrypted IP
+    :rtype: bytes
+    
+    """
+    
     with open("encrypted_ip", 'rb') as encrypted_ip:
         data = encrypted_ip.read()
     return data
