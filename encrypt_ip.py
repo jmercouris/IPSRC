@@ -3,6 +3,7 @@
 # post it publicly online.                                              #
 #########################################################################
 
+import ipgetter
 import configparser
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
@@ -16,7 +17,7 @@ public_key = RSA.importKey(open(public_key_path).read())
 
 cipher = PKCS1_OAEP.new(public_key)
 
-message = "attack at dawn"
+message = ipgetter.myip()
 encrypted_message = cipher.encrypt(message.encode("utf-8"))
 
 # Write the Encrypted IP to a File - to be uploaded publicly
