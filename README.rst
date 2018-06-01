@@ -80,3 +80,7 @@ platform, you must implement two functions :code:`broadcast_data` and
 You can include your own directives within the INI file that the user
 must include for your new broadcast and read functionality. To see
 an example of this, please look at :code:`platform_git.py`.
+
+You should be able to extend IPSRC to use almost any kind of broadcast
+or existing service, you might use email, ftp servers, ssh, etc. Any
+pull requests for new platforms are always welcome, thanks!
