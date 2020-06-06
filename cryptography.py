@@ -2,7 +2,7 @@
 #  This file contains functions which are used to encrypt and decrypt the server ip  #
 ######################################################################################
 
-import ipgetter
+from ipgetter2 import ipgetter1 as ipgetter
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 

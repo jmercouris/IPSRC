@@ -52,6 +52,31 @@ In the above example, you will have to configure the repository
 to have a remote origin that it may push/pull to, otherwise the data
 will have nowhere to go (to be hosted).
 
+Installing Dependencies
+------------------------------------------------------------------------
+The python dependencies are listed in requirements.txt. You can install them
+with pip via:
+
+    python3 -m pip install -r requirements.txt
+
+Additionally, if this breaks other dependencies on your system, consider
+creating a venv:
+
+    # Create a python virtual environment.
+    python3 -m venv path/to/IPSRC/venv
+
+    # Enter the virtual environment.
+    source path/to/IPSRC/venv/bin/activate
+
+    # Install the requirements in this virtual environment.
+    python3 -m pip install -r requirements.txt
+
+    # Execute IPSRC code (python3 server_broadcast.py or client_source.py) with
+    the dependencies installed in the venv.
+    
+    # To exit the venv, run "deactivate"
+    deactivate
+
 Usage: On the Server
 ------------------------------------------------------------------------
 You'll want to install all the dependencies located in the
